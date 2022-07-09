@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Kelp",
+    "slug": "kelp",
+    "version": "1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1CC46C"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.kelpa",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Allow Kelp to use FaceID"
+      }
+    },
+    "android": {
+      "package": "com.app.kelpa",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#1CC46C"
+      },
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "description": "",
+    "extra": {
+      "flipperHack": "React Native packager is running",
+      "ACCESS_TOKEN": "Place API access token here",
+      "TOKEN_CONTRACT_ADDRESS": "Mainnet address of the token contract"
+    }
+  }
+}

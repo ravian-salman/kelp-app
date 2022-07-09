@@ -1,0 +1,27 @@
+{
+  "components": {
+    "Button": {
+      "meta": {
+        "scope": "all",
+        "parameters": {},
+        "appearances": {},
+        "variantGroups": { },
+        "states": {}
+      },
+      "appearances": {
+        "filled": {
+          "mapping": {
+            "textFontFamily": "poppins-bold"
+          },
+          "variantGroups": {
+            "size":{
+              "giant":{
+                "textFontSize": 16
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

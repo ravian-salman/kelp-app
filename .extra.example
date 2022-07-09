@@ -1,0 +1,2 @@
+ACCESS_TOKEN = 'Place API access token here'
+TOKEN_CONTRACT_ADDRESS = 'Mainnet address of the token contract'

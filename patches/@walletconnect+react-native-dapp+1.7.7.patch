@@ -1,0 +1,49 @@
+diff --git a/node_modules/@walletconnect/react-native-dapp/dist/components/WalletServiceIcon.js b/node_modules/@walletconnect/react-native-dapp/dist/components/WalletServiceIcon.js
+index f6f2efc..998f8da 100644
+--- a/node_modules/@walletconnect/react-native-dapp/dist/components/WalletServiceIcon.js
++++ b/node_modules/@walletconnect/react-native-dapp/dist/components/WalletServiceIcon.js
+@@ -7,13 +7,6 @@ const styles = StyleSheet.create({
+     fullWidth: { width: '100%' },
+     icon: { borderRadius: 15 },
+     noOverflow: { overflow: 'hidden' },
+-    title: {
+-        color: 'white',
+-        fontSize: 12,
+-        fontWeight: '500',
+-        textAlign: 'center',
+-    },
+-    padding: { padding: 5 },
+ });
+ export default function WalletServiceIcon({ width, height, walletService, connectToWalletService, size = 'md' }) {
+     const uri = React.useMemo(() => (`https://registry.walletconnect.org/logo/${size}/${walletService.id}.jpeg`), [walletService, size]);
+@@ -21,14 +14,13 @@ export default function WalletServiceIcon({ width, height, walletService, connec
+     return (React.createElement(TouchableOpacity, { onPress: onPress, style: [
+             { width, height },
+             styles.container,
+-            styles.padding,
+         ] },
+         React.createElement(Image, { style: [
+                 styles.icon,
+                 {
+-                    width: height * 0.6,
+-                    height: height * 0.6,
++                    width: height,
++                    height: height,
+                 },
+             ], source: { uri } }),
+-        React.createElement(Text, { style: [styles.title, styles.fullWidth], numberOfLines: 1, ellipsizeMode: "tail" }, walletService.name)));
++        ));
+ }
+diff --git a/node_modules/@walletconnect/react-native-dapp/package.json b/node_modules/@walletconnect/react-native-dapp/package.json
+index 1f0655d..2c316e9 100644
+--- a/node_modules/@walletconnect/react-native-dapp/package.json
++++ b/node_modules/@walletconnect/react-native-dapp/package.json
+@@ -42,8 +42,6 @@
+     "@walletconnect/types": "^1.7.7",
+     "@walletconnect/utils": "^1.7.7",
+     "keyvaluestorage": "0.7.1",
+-    "react-native-qrcode-svg": "6.0.6",
+-    "react-native-svg": "9.6.4",
+     "use-deep-compare-effect": "1.6.1"
+   },
+   "devDependencies": {

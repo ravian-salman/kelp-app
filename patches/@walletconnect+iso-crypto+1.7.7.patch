@@ -1,0 +1,17 @@
+diff --git a/node_modules/@walletconnect/iso-crypto/dist/esm/index.js b/node_modules/@walletconnect/iso-crypto/dist/esm/index.js
+index a844afa..eb46f89 100644
+--- a/node_modules/@walletconnect/iso-crypto/dist/esm/index.js
++++ b/node_modules/@walletconnect/iso-crypto/dist/esm/index.js
+@@ -1,9 +1,11 @@
+ import * as crypto from "@walletconnect/crypto";
++import * as Random from 'expo-random';
+ import * as encoding from "@walletconnect/encoding";
+ import { convertArrayBufferToBuffer, convertBufferToArrayBuffer } from "@walletconnect/utils";
+ export async function generateKey(length) {
+     const _length = (length || 256) / 8;
+-    const bytes = crypto.randomBytes(_length);
++    const randomBytes = await Random.getRandomBytesAsync(_length);
++    const bytes = await Random.getRandomBytesAsync(_length);
+     const result = convertBufferToArrayBuffer(encoding.arrayToBuffer(bytes));
+     return result;
+ }
